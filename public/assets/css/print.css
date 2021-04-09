@@ -1,0 +1,18 @@
+@media print {
+    .pcoded-navbar{
+        display:none; 
+    }
+    .navbar-wrapper{
+        display:none; 
+    }
+    .card-body{
+        display:none; 
+    }
+}
+
+.btnfixo{
+    position: fixed;  
+    float: right;
+    color:blue;
+ }
+ 

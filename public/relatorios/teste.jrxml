@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teste" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b63b1515-6e65-4895-b411-2ec6e51fdf30">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sql.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="484"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="516"/>
+	<parameter name="NumeroOs" class="java.lang.Long" nestedType="java.lang.Integer">
+		<parameterDescription><![CDATA[Numero da OS]]></parameterDescription>
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT *
+FROM OrdemServico
+WHERE 
+	 OrdemServico.idStatusOs <> '5'
+	 and idOs =  $P{NumeroOs} ]]>
+	</queryString>
+	<field name="idOs" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="idOs"/>
+	</field>
+	<field name="Descricao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Descricao"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="20" width="200" height="30" uuid="ae7bc495-434d-4ae4-8bf5-5ddeed673227"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Relatório Teste]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="2" width="100" height="30" uuid="e7b7cb46-568d-4a8e-b666-528b5a4b6ac4"/>
+				<text><![CDATA[Descricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="2" width="100" height="30" uuid="9b635ed7-999e-4321-a670-a5f8f12ed68a"/>
+				<text><![CDATA[idOs]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField textAdjust="ScaleFont" evaluationTime="Auto">
+				<reportElement x="110" y="3" width="450" height="20" uuid="23e2b6f7-f370-4bdc-85bd-90c812cb9206"/>
+				<textFieldExpression><![CDATA[$F{Descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="3" width="100" height="20" uuid="4f87cef7-1894-48f3-ae9f-d5db27a547c4"/>
+				<textFieldExpression><![CDATA[$F{idOs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="31" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>

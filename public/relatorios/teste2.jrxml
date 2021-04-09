@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teste2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="739c3aa3-ab33-4083-b1cf-6ff26a8037eb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sql.xml"/>
+	<queryString language="SQL">
+		<![CDATA[select * from SATKSUINCO.dbo.tbBem]]>
+	</queryString>
+	<field name="Cod_bem" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Cod_bem"/>
+	</field>
+	<field name="Item_bem" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Item_bem"/>
+	</field>
+	<field name="Descricao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Descricao"/>
+	</field>
+	<field name="Data_aquisicao" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="Data_aquisicao"/>
+	</field>
+	<group name="Cod_bem">
+		<groupExpression><![CDATA[$F{Cod_bem}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="0" width="100" height="30" uuid="5cdf56f2-2650-46b9-aab2-3422cf926087">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c97e1f48-a835-4a4e-a9fe-6902cb1ec010"/>
+				</reportElement>
+				<text><![CDATA[Cod_bem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="0" width="100" height="30" uuid="b7e67114-ebc6-411f-8ee7-a573212d775e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd2d84ff-ff21-4dd1-9264-535c7c55e86d"/>
+				</reportElement>
+				<text><![CDATA[Item_bem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="0" width="100" height="30" uuid="0f898970-850e-48e5-bf02-a38fa0f4e894">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2425920f-7f9b-4281-83d4-bf670779454b"/>
+				</reportElement>
+				<text><![CDATA[Descricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="1" width="100" height="30" uuid="cc870d07-7a4d-49da-8fd2-7c07bbd6330c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="55660f84-7e8b-445a-9c20-aac05495d012"/>
+				</reportElement>
+				<text><![CDATA[Data_aquisicao]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="3" width="100" height="30" uuid="61045374-b66b-4ae8-b2e3-f285b00db17c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c97e1f48-a835-4a4e-a9fe-6902cb1ec010"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Cod_bem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="3" width="100" height="30" uuid="68a49e1c-16f5-419f-a83b-fc65e5601ed6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd2d84ff-ff21-4dd1-9264-535c7c55e86d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Item_bem}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="220" y="3" width="220" height="30" uuid="0756a649-cd8b-48e1-b3f3-996b6746561a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2425920f-7f9b-4281-83d4-bf670779454b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="3" width="100" height="30" uuid="94a465f5-f675-4782-8187-3cf4aaffd81f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="55660f84-7e8b-445a-9c20-aac05495d012"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Data_aquisicao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="15" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
